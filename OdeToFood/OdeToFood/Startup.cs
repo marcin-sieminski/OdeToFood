@@ -18,7 +18,6 @@ namespace OdeToFood
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -39,11 +38,11 @@ namespace OdeToFood
 
 
             // aspnetcore30
-            services.AddRazorPages();
+            services.AddRazorPages()
+                .AddRazorRuntimeCompilation();
             services.AddControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -59,7 +58,7 @@ namespace OdeToFood
             app.Use(SayHelloMiddleware);
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseNodeModules();
+            //app.UseNodeModules();
 
             // aspnetcore30
             app.UseRouting();            

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OdeToFood.Core;
 using OdeToFood.Data;
@@ -40,7 +36,7 @@ namespace OdeToFood.Pages.Restaurants
                 return RedirectToPage("./NotFound");
             }
 
-            TempData["Message"] = $"{restaurant.Name} deleted";
+            TempData["ChangedBy"] = $"{restaurant.Name} deleted";
             return RedirectToPage("./List");
         }
     }

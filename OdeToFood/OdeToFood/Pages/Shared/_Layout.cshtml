@@ -4,14 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OdeToFood</title>
-
-    <environment include="Development">
-        <link href="~/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-        <link href="~/node_modules/@@fortawesome/fontawesome-free/css/all.css" rel="stylesheet" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css"
+    
+    <link rel="stylesheet" href="//ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" 
@@ -21,7 +15,6 @@
               asp-fallback-test-property="font-family" 
               asp-fallback-test-value="FontAwesome" />        
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
     
 </head>
 <body>

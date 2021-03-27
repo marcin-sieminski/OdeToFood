@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OdeToFood.Core;
 using OdeToFood.Data;
+using System.Collections.Generic;
 
 namespace OdeToFood.Pages.Restaurants
 {
@@ -61,7 +58,7 @@ namespace OdeToFood.Pages.Restaurants
                 restaurantData.Add(Restaurant);
             }
             restaurantData.Commit();
-            TempData["Message"] = "Restaurant saved!";
+            TempData["ChangedBy"] = "Restaurant saved!";
             return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
     }

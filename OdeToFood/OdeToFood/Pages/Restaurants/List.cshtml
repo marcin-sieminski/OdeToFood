@@ -4,7 +4,7 @@
     ViewData["Title"] = "Restaurants";
 }
 
-<h1>Restaurants</h1>
+<h3>Restaurants</h3>
 
 <form method="get">
     <div class="form-group">
@@ -28,5 +28,5 @@
 <a asp-page="./Edit" class="btn btn-outline-primary">Add New</a>
 
 @section footer {
-    <div>@Model.Message</div>
+    <div>Project changed by: @Model.ProjectChangedBy</div>
 }
