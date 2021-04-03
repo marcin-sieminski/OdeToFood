@@ -24,9 +24,9 @@ namespace OdeToFood.Pages.Restaurants
                          IRestaurantData restaurantData,
                          ILogger<ListModel> logger)
         {
-            this._config = config;
-            this._restaurantData = restaurantData;
-            this._logger = logger;
+            _config = config;
+            _restaurantData = restaurantData;
+            _logger = logger;
         }
 
         public void OnGet()
